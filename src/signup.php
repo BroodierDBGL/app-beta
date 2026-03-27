@@ -30,6 +30,21 @@ if (pg_num_rows($res_phone) > 0) {
     exit();
 }
 
+//RAMA 3
+if ($res_local) {
+    $res_supa = pg_query($supa_conn, $sql);
+
+    if ($res_supa) {
+        echo "¡Listo! Guardado en ambos lados.";
+    } else {
+        echo "Error: Se guardó en local pero no en la nube.";
+    }
+} else {
+    echo "Error: No se pudo guardar ni en local.";
+}
+
+
+
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd)
                
