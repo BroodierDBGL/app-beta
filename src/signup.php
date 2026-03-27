@@ -29,7 +29,7 @@ if (pg_num_rows($res_phone) > 0) {
     echo "Error: El número de celular '$m_phone' ya está registrado en nuestro sistema."; 
     exit();
 }
-
+//
 //RAMA 3
 if ($res_local) {
     $res_supa = pg_query($supa_conn, $sql);
