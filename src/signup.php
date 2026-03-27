@@ -12,7 +12,7 @@
 
     //RAMA 1
 //email 
-$check_email = "SELECT email FROM users_model WHERE email = '$e_mail'";
+$check_email = "SELECT email FROM users WHERE email = '$e_mail'";
 $res_email = pg_query($local_conn, $check_email);
 
 if (pg_num_rows($res_email) > 0) {
@@ -22,7 +22,7 @@ if (pg_num_rows($res_email) > 0) {
 
 //RAMA 2
 //telefono 
-$check_phone = "SELECT mobile_phone FROM users_model WHERE mobile_phone = '$m_phone'";
+$check_phone = "SELECT mobile_phone FROM users WHERE mobile_phone = '$m_phone'";
 $res_phone = pg_query($local_conn, $check_phone);
 
 if (pg_num_rows($res_phone) > 0) {
@@ -53,6 +53,8 @@ if (pg_num_rows($res_phone) > 0) {
 
 
 $res_local = pg_query($local_conn, $sql); 
+
+
 
     //Para comprobar se usa postman
 
