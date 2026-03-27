@@ -43,6 +43,10 @@ if ($res_local) {
     echo "Error: No se pudo guardar ni en local.";
 }
 
+//contraseña
+$enc_pass = password_hash($p_sword, PASSWORD_BCRYPT);
+
+
 
 
     //Query to insert into SQL
